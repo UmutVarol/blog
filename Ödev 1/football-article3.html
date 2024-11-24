@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>World Cup 2026: Teams to Watch</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            background: #f4f4f4;
+            color: #333;
+            opacity: 0;
+            animation: fadeIn 1s forwards;
+        }
+        header {
+            background-color: #28a745;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            transform: translateY(-20px);
+            animation: slideInDown 1s ease-out forwards;
+        }
+        header h1 {
+            margin: 0;
+            font-size: 2em;
+        }
+        main {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            opacity: 0;
+            animation: fadeIn 2s ease-in forwards 1s;
+        }
+        h2 {
+            font-size: 1.8em;
+            color: #4251d9;
+            margin-bottom: 15px;
+            text-align: center;
+            opacity: 0;
+            animation: fadeIn 1s ease-in forwards 1.5s;
+        }
+        h3 {
+            color: #0056b3;
+            margin-top: 20px;
+            opacity: 0;
+            animation: fadeIn 1s ease-in forwards;
+            animation-delay: calc(1.5s + var(--delay, 0s));
+        }
+        p {
+            font-size: 1.1em;
+            line-height: 1.6;
+            margin-bottom: 15px;
+            opacity: 0;
+            animation: fadeIn 1s ease-in forwards;
+            animation-delay: calc(1.5s + var(--delay, 0s));
+        }
+        footer {
+            text-align: center;
+            padding: 10px;
+            margin-top: 20px;
+            background-color: #f1f1f1;
+            opacity: 0;
+            animation: fadeIn 2s ease-in forwards 3s;
+        }
+
+        /* Animations */
+        @keyframes fadeIn {
+            to {
+                opacity: 1;
+            }
+        }
+
+        @keyframes slideInDown {
+            from {
+                transform: translateY(-100px);
+            }
+            to {
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>World Cup 2026: Teams to Watch</h1>
+    </header>
+    <main>
+        <h2>The Excitement Builds for the Next World Cup</h2>
+        <p style="--delay: 0s;">
+            As the countdown to the 2026 FIFA World Cup begins, fans are eagerly anticipating one of the most competitive tournaments in football history. With 48 teams participating for the first time, the stage is set for new rivalries, surprises, and unforgettable moments.
+        </p>
+        <h3>1. Defending Champions: Argentina</h3>
+        <p style="--delay: 0.2s;">
+            After their stellar victory in 2022, Argentina remains a team to beat. With Lionel Messi likely retired from international duty, players like Julián Álvarez and Enzo Fernández are expected to lead the charge. Their balance of experience and youth makes them a formidable force.
+        </p>
+        <h3>2. European Powerhouses</h3>
+        <p style="--delay: 0.4s;">
+            Traditional European giants such as France, Germany, and Spain are reloading their squads with promising young talents. France’s Kylian Mbappé and Germany’s Jamal Musiala are likely to shine, while Spain continues to produce technically gifted players under a renewed tactical philosophy.
+        </p>
+        <h3>3. Emerging Contenders</h3>
+        <p style="--delay: 0.6s;">
+            Teams like Morocco and Japan, who impressed in the 2022 World Cup, are aiming to go even further. Morocco’s defensive solidity and Japan’s high-energy style could see them challenging traditional powerhouses.
+        </p>
+        <h3>4. The United States</h3>
+        <p style="--delay: 0.8s;">
+            As co-hosts, the USMNT is under immense pressure to perform. With young stars like Christian Pulisic and Gio Reyna, and a growing domestic league, the USA is looking to make a deep run on home soil.
+        </p>
+        <p style="--delay: 1s;">
+            With these teams and many others in contention, the 2026 World Cup promises to be a tournament like no other. Fans around the world are ready to cheer for their nations and witness the beauty of the world's game.
+        </p>
+    </main>
+    <footer>
+        &copy; 2024 Football Insights. All rights reserved.
+    </footer>
+</body>
+</html>

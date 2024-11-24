@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Post Detayları</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <header>
+        <h1>Bloguma Hoşgeldiniz</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Ana Sayfa</a></li>
+                <li><a href="blog.html">Blog Yazıları</a></li>
+                <li><a href="about.html">Hakkında</a></li>
+                <li><a href="contact.html">İletişim</a></li>
+                <li><a href="gallery.html">Galeri</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="post-detail">
+        <h2>Yazı Başlığı</h2>
+        <p><strong>Tarih:</strong> 01.01.2024 | <strong>Yazar:</strong> Ahmet Yılmaz</p>
+        <p>Yazının tam içeriği burada yer alacak. Burada yazının detaylarına yer verilecek...</p>
+
+        <h3>Yorumlar</h3>
+        <div id="comments">
+            <div class="comment">
+                <p><strong>Kullanıcı 1:</strong> Bu yazıyı çok beğendim!</p>
+            </div>
+            <div class="comment">
+                <p><strong>Kullanıcı 2:</strong> Çok bilgilendirici bir yazı, teşekkürler.</p>
+            </div>
+        </div>
+
+        <h3>Yorum Yap</h3>
+        <form action="comment.php" method="POST">
+            <textarea name="comment" rows="4" placeholder="Yorumunuzu buraya yazın" required></textarea>
+            <button type="submit">Yorum Gönder</button>
+        </form>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Blog Adı - Tüm Hakları Saklıdır.</p>
+    </footer>
+
+</body>
+</html>

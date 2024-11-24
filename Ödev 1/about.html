@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Me</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            background: linear-gradient(to bottom, #e0f7fa, #ffffff);
+            color: #333;
+            opacity: 0;
+            animation: fadeIn 1.5s forwards;
+        }
+        header {
+            background-color: #0073e6;
+            color: white;
+            padding: 20px 10px;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+            transform: translateY(-20px);
+            animation: slideInDown 1s ease-out forwards;
+        }
+        header h1 {
+            margin: 0;
+            font-size: 2.5em;
+        }
+        nav {
+            background-color: #005bb5;
+            padding: 10px;
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+            opacity: 0;
+            animation: fadeIn 2s ease-in forwards 0.5s;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            padding: 10px 15px;
+            border-radius: 5px;
+            transition: background-color 0.3s, transform 0.3s;
+        }
+        nav a:hover {
+            background-color: #003f7f;
+            transform: scale(1.1);
+        }
+        main {
+            max-width: 900px;
+            margin: 30px auto;
+            padding: 30px;
+            background: white;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            opacity: 0;
+            animation: fadeIn 2s ease-in forwards 1s;
+        }
+        .section {
+            margin-bottom: 20px;
+        }
+        .section h2 {
+            font-size: 2em;
+            margin-bottom: 15px;
+            color: #0073e6;
+            opacity: 0;
+            animation: fadeIn 1s ease-in forwards 1.5s;
+        }
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #f1f1f1;
+            border-top: 1px solid #ddd;
+            opacity: 0;
+            animation: fadeIn 2s ease-in forwards 2s;
+        }
+        footer p {
+            margin: 0;
+        }
+        .intro-image {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            opacity: 0;
+            animation: fadeIn 1.5s ease-in forwards 2s;
+        }
+
+        /* Animasyonlar */
+        @keyframes fadeIn {
+            to {
+                opacity: 1;
+            }
+        }
+
+        @keyframes slideInDown {
+            from {
+                transform: translateY(-100px);
+            }
+            to {
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>About Me</h1>
+    </header>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="blog.html">Blog Posts</a>
+    </nav>
+    <main>
+        <section class="section">
+            <h2>Welcome to My About Page</h2>
+            <img src="https://via.placeholder.com/800x400" alt="About Me Image" class="intro-image">
+            <p>Hello, I'm <strong>Muhammed Umut Varol</strong>, a 21-year-old student currently studying Software Engineering at Okan University. As you may have seen from the posts on my blog, I am passionate about cryptocurrencies, cars, and football. I am originally from Iğdır, but I live in Istanbul, a city whose history and cultural significance I deeply admire.</p>
+            <p>I have two siblings and I'm the eldest. I care deeply for both of my younger siblings. One of my biggest aspirations is to bring about meaningful changes in areas that benefit humanity. Pursuing Software Engineering is, I believe, a great way to start achieving that dream. Another goal of mine is to travel the world—starting with visiting historical places and landmarks.</p>
+            <p>Describing myself, I am a dreamer, an enthusiastic, and an adventure-loving person. I thrive when I'm on the move; being inactive makes me feel quite the opposite—melancholic and restless. I live both my feelings and emotions to the fullest extent.</p>
+            <p>These are just a few things I can say about myself.</p>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 My Blog. All rights reserved.</p>
+    </footer>
+</body>
+</html>

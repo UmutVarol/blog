@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog Posts</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            background: #f4f4f4;
+            color: #333;
+            opacity: 0;
+            animation: fadeIn 1s forwards;
+        }
+        header {
+            background-color: #0073e6;
+            color: white;
+            padding: 20px 10px;
+            text-align: center;
+            transform: translateY(-20px);
+            animation: slideInDown 1s ease-out forwards;
+        }
+        header h1 {
+            margin: 0;
+            font-size: 2em;
+        }
+        nav {
+            background-color: #005bb5;
+            padding: 10px;
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            opacity: 0;
+            animation: fadeIn 2s ease-in forwards 0.5s;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            padding: 5px 10px;
+            border-radius: 5px;
+            transition: background-color 0.3s, transform 0.3s;
+        }
+        nav a:hover {
+            background-color: #003f7f;
+            transform: scale(1.1);
+        }
+        main {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background: white;
+            opacity: 0;
+            animation: fadeIn 2s ease-in forwards 1s;
+        }
+        .section {
+            margin-bottom: 20px;
+        }
+        h2 {
+            font-size: 1.8em;
+            color: #333;
+            margin-bottom: 15px;
+            opacity: 0;
+            animation: fadeIn 1s ease-in forwards 1.5s;
+        }
+        h3 {
+            font-size: 1.3em;
+            color: #0073e6;
+            margin-bottom: 10px;
+            opacity: 0;
+            animation: fadeIn 1s ease-in forwards 2s;
+        }
+        p {
+            font-size: 1em;
+            color: #555;
+            margin-bottom: 15px;
+            opacity: 0;
+            animation: fadeIn 1s ease-in forwards 2.5s;
+        }
+        a {
+            color: #0073e6;
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+        a:hover {
+            color: #003f7f;
+        }
+        footer {
+            text-align: center;
+            padding: 10px;
+            margin-top: 20px;
+            background-color: #f1f1f1;
+            opacity: 0;
+            animation: fadeIn 2s ease-in forwards 3s;
+        }
+
+        /* Animasyonlar */
+        @keyframes fadeIn {
+            to {
+                opacity: 1;
+            }
+        }
+
+        @keyframes slideInDown {
+            from {
+                transform: translateY(-100px);
+            }
+            to {
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Blog Posts</h1>
+    </header>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="blog.html">Blog Posts</a>
+    </nav>
+    <main>
+        <section class="section">
+            <h2>Cryptocurrency Articles</h2>
+            <h3><a href="crypto-article1.html">Bitcoin's Rise in 2024: Market Trends</a></h3>
+            <p>An in-depth look at how Bitcoin has performed this year and market expectations. <a href="crypto-article1.html">Read more...</a></p>
+            <h3><a href="crypto-article2.html">Understanding Blockchain Beyond Cryptocurrencies</a></h3>
+            <p>Exploring the broad applications of blockchain technology. <a href="crypto-article2.html">Read more...</a></p>
+            <h3><a href="crypto-article3.html">Ethereum 2.0: What It Means for Investors</a></h3>
+            <p>A look into Ethereum’s upgrades and their implications. <a href="crypto-article3.html">Read more...</a></p>
+            <h3><a href="crypto-article4.html">The Impact of Stablecoins on Global Finance</a></h3>
+            <p>How stablecoins are changing traditional finance sectors. <a href="crypto-article4.html">Read more...</a></p>
+        </section>
+
+        <section class="section">
+            <h2>Football Articles</h2>
+            <h3><a href="football-article1.html">The Top 10 Transfers of the Season</a></h3>
+            <p>An analysis of the most impactful transfers in top European leagues. <a href="football-article1.html">Read more...</a></p>
+            <h3><a href="football-article2.html">Tactical Trends in Modern Football</a></h3>
+            <p>How tactics have evolved in the game over the past decade. <a href="football-article2.html">Read more...</a></p>
+            <h3><a href="football-article3.html">World Cup 2026: Teams to Watch</a></h3>
+            <p>Previewing the top contenders for the next World Cup. <a href="football-article3.html">Read more...</a></p>
+            <h3><a href="football-article4.html">The Role of VAR in Today’s Football</a></h3>
+            <p>How video assistant refereeing has changed the dynamics of the game. <a href="football-article4.html">Read more...</a></p>
+        </section>
+    </main>
+    <footer>
+        &copy; 2024 My Blog. All rights reserved.
+    </footer>
+</body>
+</html>

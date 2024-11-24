@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery - My Blog</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        /* Genel Ayarlar */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            line-height: 1.6;
+            background: #f9f9f9;
+            color: #333;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        /* Başlık */
+        header {
+            background: linear-gradient(135deg, #0073e6, #005bb5);
+            color: white;
+            text-align: center;
+            padding: 20px 10px;
+            border-bottom: 4px solid #003f7f;
+            opacity: 0;
+            animation: fadeIn 1s forwards;
+            animation-delay: 0.2s;
+        }
+
+        header h1 {
+            font-size: 2.5em;
+            font-weight: 700;
+        }
+
+        /* Navigasyon */
+        nav {
+            background-color: white;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            padding: 10px;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            opacity: 0;
+            animation: fadeIn 1s forwards;
+            animation-delay: 0.4s;
+        }
+
+        nav a {
+            font-weight: 500;
+            color: #0073e6;
+            padding: 8px 16px;
+            border: 2px solid transparent;
+            border-radius: 20px;
+            transition: all 0.3s ease-in-out;
+        }
+
+        nav a:hover, .active {
+            background-color: #0073e6;
+            color: white;
+            border-color: #005bb5;
+        }
+
+        
+        @keyframes fadeIn {
+            0% { opacity: 0; }
+            100% { opacity: 1; }
+        }
+
+       
+        main {
+            max-width: 1200px;
+            margin: 30px auto;
+            padding: 20px;
+            background: white;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            opacity: 0;
+            animation: fadeIn 1s forwards;
+            animation-delay: 0.6s;
+        }
+
+        .intro {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .intro h2 {
+            font-size: 2.5em;
+            color: #005bb5;
+            margin-bottom: 15px;
+        }
+
+        .intro p {
+            font-size: 1.1em;
+            margin-top: 10px;
+        }
+
+        
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 20px;
+            opacity: 0;
+            animation: fadeIn 1s forwards;
+            animation-delay: 0.8s;
+        }
+
+        .gallery-item {
+            position: relative;
+            overflow: hidden;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+            border-radius: 8px;
+        }
+
+        .gallery-item:hover {
+            transform: scale(1.05);
+            box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Hover Overlay */
+        .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: rgba(0, 0, 0, 0.5);
+            opacity: 0;
+            transition: opacity 0.3s ease;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 8px;
+        }
+
+        .gallery-item:hover .overlay {
+            opacity: 1;
+        }
+
+        .overlay .text {
+            color: white;
+            font-size: 1.5em;
+            font-weight: bold;
+            text-transform: uppercase;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+        }
+
+        
+        footer {
+            text-align: center;
+            padding: 15px;
+            background: #0073e6;
+            color: white;
+            margin-top: 30px;
+        }
+
+        footer p {
+            font-size: 0.9em;
+        }
+
+        
+        .social-media a {
+            display: inline-flex;
+            justify-content: center;
+            align-items: center;
+            width: 40px;
+            height: 40px;
+            background-color: #0073e6;
+            color: white;
+            border-radius: 50%;
+            font-size: 1.2em;
+            transition: transform 0.3s ease, background-color 0.3s ease;
+        }
+
+        .social-media a:hover {
+            background-color: #005bb5;
+            transform: scale(1.1);
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Gallery</h1>
+    </header>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+        <a href="gallery.html" class="active">Gallery</a>
+        <a href="blog.html">Blog Posts</a>
+    </nav>
+    <main>
+        <section class="intro">
+            <h2>Explore the Gallery</h2>
+            <p>Browse through some of my favorite moments and visuals captured over time. Enjoy these categorized images!</p>
+        </section>
+        
+        
+        <section class="gallery">
+            
+            <div class="gallery-item">
+                <img src="fotoğraf1.jpg" alt="Cryptocurrency">
+                <div class="overlay">
+                    <div class="text">Cryptocurrency Revolution</div>
+                </div>
+            </div>
+            <div class="gallery-item">
+                <img src="crypto2.jpg" alt="Blockchain">
+                <div class="overlay">
+                    <div class="text">Blockchain Technology</div>
+                </div>
+            </div>
+            
+            <!-- Futbol Fotoğrafları -->
+            <div class="gallery-item">
+                <img src="football1.jpg" alt="Football Match">
+                <div class="overlay">
+                    <div class="text">Exciting Football Match</div>
+                </div>
+            </div>
+            <div class="gallery-item">
+                <img src="football2.jpg" alt="Football Stadium">
+                <div class="overlay">
+                    <div class="text">Stadium Atmosphere</div>
+                </div>
+            </div>
+            
+            <!-- Araba Fotoğrafları -->
+            <div class="gallery-item">
+                <img src="car1.jpg" alt="Luxury Car">
+                <div class="overlay">
+                    <div class="text">Luxury Car Design</div>
+                </div>
+            </div>
+            <div class="gallery-item">
+                <img src="car2.jpg" alt="Sport Car">
+                <div class="overlay">
+                    <div class="text">Speed and Power</div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 My Blog. All rights reserved.</p>
+    </footer>
+</body>
+</html>
+

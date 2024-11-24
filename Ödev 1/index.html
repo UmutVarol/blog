@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to My Blog</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            line-height: 1.6;
+            background: #f9f9f9;
+            color: #333;
+            opacity: 0;
+            animation: fadeIn 2s forwards;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        header {
+            background: linear-gradient(135deg, #0073e6, #005bb5);
+            color: white;
+            text-align: center;
+            padding: 20px 10px;
+            border-bottom: 4px solid #003f7f;
+            transform: translateY(-30px);
+            animation: slideInDown 1s ease-out forwards 0.5s;
+        }
+
+        header h1 {
+            font-size: 2.5em;
+            font-weight: 700;
+        }
+
+        nav {
+            background-color: white;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            padding: 10px;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            opacity: 0;
+            animation: fadeIn 2s forwards 1s;
+        }
+
+        nav a {
+            font-weight: 500;
+            color: #0073e6;
+            padding: 8px 16px;
+            border: 2px solid transparent;
+            border-radius: 20px;
+            transition: all 0.3s ease-in-out;
+        }
+
+        nav a:hover {
+            background-color: #0073e6;
+            color: white;
+            border-color: #005bb5;
+        }
+
+        main {
+            max-width: 900px;
+            margin: 30px auto;
+            padding: 20px;
+            background: white;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            opacity: 0;
+            animation: fadeIn 2s forwards 1.5s;
+        }
+
+        .section {
+            margin-bottom: 30px;
+        }
+
+        .section h2 {
+            font-size: 1.8em;
+            color: #005bb5;
+            border-bottom: 2px solid #0073e6;
+            padding-bottom: 5px;
+            margin-bottom: 15px;
+            opacity: 0;
+            animation: fadeIn 1.5s forwards 2s;
+        }
+
+        .section p {
+            font-size: 1.1em;
+            margin-bottom: 15px;
+        }
+
+        ul {
+            list-style-type: none;
+            padding-left: 0;
+        }
+
+        ul li {
+            margin-bottom: 10px;
+            font-size: 1.1em;
+        }
+
+        ul li a {
+            color: #0073e6;
+            font-weight: 500;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        ul li a:hover {
+            color: #005bb5;
+        }
+
+        .social-media {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-top: 15px;
+        }
+
+        .social-media a {
+            display: inline-flex;
+            justify-content: center;
+            align-items: center;
+            width: 40px;
+            height: 40px;
+            background-color: #0073e6;
+            color: white;
+            border-radius: 50%;
+            font-size: 1.2em;
+            transition: all 0.3s ease-in-out;
+        }
+
+        .social-media a:hover {
+            background-color: #005bb5;
+            transform: scale(1.1);
+        }
+
+        footer {
+            text-align: center;
+            padding: 15px;
+            background: #0073e6;
+            color: white;
+            margin-top: 30px;
+            opacity: 0;
+            animation: fadeIn 2s forwards 2s;
+        }
+
+        footer p {
+            font-size: 0.9em;
+        }
+
+        @keyframes fadeIn {
+            to {
+                opacity: 1;
+            }
+        }
+
+        @keyframes slideInDown {
+            from {
+                transform: translateY(-100px);
+            }
+            to {
+                transform: translateY(0);
+            }
+        }
+
+        /* Arama Bölümü */
+        #search-container {
+            margin: 20px 0;
+        }
+
+        #search-results {
+            margin-top: 20px;
+        }
+
+        input, select, button {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Welcome to My Blog</h1>
+    </header>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="blog.html">Blog Posts</a>
+    </nav>
+    <main>
+        <section class="section" id="search-section">
+            <h2>Search Articles</h2>
+            <div id="search-container">
+                <input type="text" id="search-input" placeholder="Search by keyword...">
+                <label for="category-filter">Filter by Category:</label>
+                <select id="category-filter">
+                    <option value="">All Categories</option>
+                    <option value="Cryptocurrency">Cryptocurrency</option>
+                    <option value="Football">Football</option>
+                </select>
+                <label for="date-filter">Filter by Date:</label>
+                <input type="date" id="date-filter">
+                <button id="search-button">Search</button>
+            </div>
+            <div id="search-results"></div>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 My Blog. All rights reserved.</p>
+    </footer>
+
+    <script>
+        document.getElementById('search-button').addEventListener('click', function() {
+            const searchInput = document.getElementById('search-input').value.toLowerCase();
+            const categoryFilter = document.getElementById('category-filter').value;
+            const dateFilter = document.getElementById('date-filter').value;
+
+            fetch('data.json')
+                .then(response => response.json())
+                .then(data => {
+                    const results = data.filter(item => {
+                        const matchesKeyword = searchInput ? 
+                            item.title.toLowerCase().includes(searchInput) || 
+                            item.keywords.some(keyword => keyword.includes(searchInput)) : true;
+
+                        const matchesCategory = categoryFilter ? 
+                            item.category === categoryFilter : true;
+
+                        const matchesDate = dateFilter ? 
+                            item.date === dateFilter : true;
+
+                        return matchesKeyword && matchesCategory && matchesDate;
+                    });
+
+                    displayResults(results);
+                });
+        });
+
+        function displayResults(results) {
+            const resultsDiv = document.getElementById('search-results');
+            resultsDiv.innerHTML = ''; 
+
+            if (results.length === 0) {
+                resultsDiv.innerHTML = '<p>No results found.</p>';
+                return;
+            }
+
+            results.forEach(result => {
+                const resultItem = document.createElement('div');
+                resultItem.style.marginBottom = '15px';
+                resultItem.innerHTML = `
+                    <a href="${result.url}" style="text-decoration: none; color: #0073e6;">
+                        <h3>${result.title}</h3>
+                    </a>
+                    <p>Category: ${result.category} | Date: ${result.date}</p>
+                `;
+                resultsDiv.appendChild(resultItem);
+            });
+        }
+    </script>
+</body>
+</html>
